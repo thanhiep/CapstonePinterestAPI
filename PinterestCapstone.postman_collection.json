@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "03db675e-a733-47a8-8b31-cc29298dd4dc",
+		"name": "PinterestCapstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33641987"
+	},
+	"item": [
+		{
+			"name": "get image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/image/get-img",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"get-img"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get image page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/image/get-img-page/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"get-img-page",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search img",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/image/search?searchValue=hinh",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchValue",
+							"value": "hinh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get img detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/image/get-img-detail/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"get-img-detail",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get img comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/image/get-img-comment/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"get-img-comment",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"deadpool@gmail.com\",\r\n    \"matKhau\":\"123456\",\r\n    \"hoTen\":\"Wade Wilson\",\r\n    \"tuoi\":\"40\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/auth/sign-up",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"deadpool@gmail.com\",\r\n    \"matKhau\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/auth/login",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoxMSwiaG9UZW4iOiJXYWRlIFdpbHNvbiIsImtleSI6MTcyNDE2MzMwNDY2OH0sImlhdCI6MTcyNDE2MzMwNCwiZXhwIjoxNzI0MTYzMzA5fQ.Bkl6vbRN00f0pcew0f1_SiBY--RYUYmHwMY6Kb-E7TE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/auth/reset-token",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"auth",
+						"reset-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get is img save",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoxMSwiaG9UZW4iOiJXYWRlIFdpbHNvbiIsImtleSI6MTcyNDIyNDA1MTE5OX0sImlhdCI6MTcyNDIyNDA1MSwiZXhwIjoxNzI0MjI0MDU2fQ.IDRCN0N4XRo91xV0IohKKnqhuwByXp9DJghrlvH-Fpc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/image/get-is-img-save/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"get-is-img-save",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoxMSwiaG9UZW4iOiJXYWRlIFdpbHNvbiIsImtleSI6MTcyNDIyNDgxNTA4N30sImlhdCI6MTcyNDIyNDgxNSwiZXhwIjoxNzI0MjI0ODIwfQ.svqWgjDwj0gRHvHTJdsjewVVBsnCPYTk6rWixDl8um0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"noiDung\":\"hình tuyệt vời\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/image/add-comment/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"add-comment",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoxMSwiaG9UZW4iOiJXYWRlIFdpbHNvbiIsImtleSI6MTcyNDIyNjIwMjE3M30sImlhdCI6MTcyNDIyNjIwMiwiZXhwIjoxNzI0MjI2NTAyfQ.ZonRtNTvAPM0yMnmlS8T61s2akWn_JIdrjQ8Z3cu8Wo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/user/profile",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get img save",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoxMSwiaG9UZW4iOiJXYWRlIFdpbHNvbiIsImtleSI6MTcyNDIyNzIyNzk1MX0sImlhdCI6MTcyNDIyNzIyNywiZXhwIjoxNzI0MjI3NTI3fQ.k0vJLhf_bYUhWNCWgLRJfcIisPyKuZqPE4JkkY9RAu4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/user/get-img-save",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-img-save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete img",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoxMSwiaG9UZW4iOiJXYWRlIFdpbHNvbiIsImtleSI6MTcyNDIyOTE4ODYyNH0sImlhdCI6MTcyNDIyOTE4OCwiZXhwIjoxNzI0MjI5NDg4fQ.MwyvahYPFzOeowKA_5g_ZtRByS4rRkhOoC-57xI22FU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"hinhId\":3}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/image/delete-img",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"delete-img"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoxMSwiaG9UZW4iOiJXYWRlIFdpbHNvbiIsImtleSI6MTcyNTk0NDExMTA5OH0sImlhdCI6MTcyNTk0NDExMSwiZXhwIjoxNzI1OTQ0NDExfQ.A5HgnOOE0_yAO7IJje-RnTyhDn207ikU_MR1iINDxgA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "hinhAnh",
+							"type": "file",
+							"src": "/D:/reactlogo.png"
+						},
+						{
+							"key": "tieuDe",
+							"value": "logo",
+							"type": "text"
+						},
+						{
+							"key": "moTa",
+							"value": "nice",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/image/upload",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"image",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
